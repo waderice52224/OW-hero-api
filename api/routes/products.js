@@ -35,9 +35,12 @@ router.post("/", (req, res, next) => {
         .save()
         .then(result => {
             console.log(result);
+            console.log(req.body);
             res.status(201).json({
                 message: "Handling POST requests to /products",
                 createdProduct: result
+
+
             });
         })
         .catch(err => {

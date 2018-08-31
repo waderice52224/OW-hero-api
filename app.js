@@ -7,10 +7,8 @@ const mongoose = require("mongoose");
 const productRoutes = require("./api/routes/products");
 const orderRoutes = require("./api/routes/orders");
 
-mongoose.connect("mongodb+srv://wade:admin-wade@ow-hero-api-4flyu.mongodb.net/test?retryWrites=true",
-    {
-    useMongoClient: true
-    }
+mongoose.connect("mongodb+srv://wade:admin-wade@ow-hero-api-4flyu.mongodb.net/test?retryWrites=true", { useNewUrlParser: true }
+
 );
 
 app.use(morgan("dev"));
